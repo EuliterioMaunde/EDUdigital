@@ -29,15 +29,15 @@
                     <form id="add_notes_form" method="post" action="{{route('calendar.store')}}">
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Data seleccionada</label>
-                            <input type="date" class="form-control" id="selected_date" readonly>
+                            <input type="date" class="form-control" id="selected_date" readonly required>
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Título</label>
-                            <input class="form-control" type="text" id="title"></input>
+                            <input class="form-control" type="text" id="title" required maxlength="100"></input>
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Descrição</label>
-                            <textarea class="form-control" id="anotation_info"></textarea>
+                            <textarea class="form-control" id="anotation_info" required maxlength="500"></textarea>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" id="dismiss_modal" data-bs-dismiss="modal">Fechar</button>
